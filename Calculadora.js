@@ -77,3 +77,12 @@ function toggleInfo() {
     info.style.display = "block";
   }
 }
+
+document.addEventListener("click", function(event) {
+  const infoBox = document.querySelector(".info");
+  
+
+  if (event.target.closest(".info") === null && event.target.closest(".infoicon") === null) {
+    infoBox.style.display = "none";
+  }
+})
